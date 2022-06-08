@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="730dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.013">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            app:srcCompat="@drawable/calcima" />
+
+        <TextView
+            android:id="@+id/respuesta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/numero_uno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/text_hint_numero"
+            android:inputType="number"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/numero_dos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/text_hint_numero"
+            android:inputType="number"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="suma"
+                    android:text="@string/btn_texto_suma" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="resta"
+                    android:text="@string/btn_texto_resta" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="multiplicar"
+                    android:text="@string/btn_texto_multiplicacion" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="division"
+                    android:text="@string/btn_texto_division" />
+            </TableRow>
+
+        </TableLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+
+        <Button
+            android:id="@+id/btn_politicas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="irPoliticas"
+            android:text="@string/btn_texto_politicas" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
